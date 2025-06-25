@@ -1,5 +1,0 @@
-- Building docker image using the dockerfile
-docker build -t fastapi-docker-app .
-
-- Run the container
-docker run -d -p 8000:8000 fastapi-docker-app
