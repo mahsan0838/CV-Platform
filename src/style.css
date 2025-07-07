@@ -1,3 +1,16 @@
+/* 🎨 Color Variables */
+:root {
+  --gradient_bg: #e3e8ff;
+  --bg_image_path: url("Helping_images/bg_gradient_2.jpg");
+  --white: #ffffff;
+  --black: #000000;
+  --accent_colour: #00185be7;
+  --hover_colour: #e0e0e0;
+}
+
+
+
+/* 🌐 Global Reset & Font */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +18,18 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 🌈 Background Styling */
 body, html {
   height: 100%;
-  background: linear-gradient(to bottom right, #e6e1f4, #e6e1f4);
+  background-image: var(--bg_image_path);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--gradient_bg); /* fallback color */
   overflow: hidden;
 }
 
+/* 🧭 Layout Centering */
 .background {
   height: 100%;
   display: flex;
@@ -18,8 +37,9 @@ body, html {
   align-items: center;
 }
 
+/* 💳 Login/Signup Card */
 .login-card {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   padding: 60px 40px;
@@ -29,10 +49,12 @@ body, html {
   position: relative;
 }
 
+/* 📎 Icon */
 .icon {
   margin-bottom: 30px;
 }
 
+/* 🔠 Input Group */
 .input-group {
   margin: 15px 0;
 }
@@ -41,39 +63,51 @@ input {
   width: 100%;
   padding: 12px 10px;
   border-radius: 4px;
-  border: 1px solid #a28be7e7;
+  border: 1px solid var(--accent_colour);
   outline: none;
   background-color: transparent;
-  color: #a28be7e7;
+  color: var(--accent_colour);
   font-size: 14px;
-  border: 1px solid #a28be7e7;
 }
 
 input::placeholder {
-  color: #a28be7e7;
+  color: var(--accent_colour);
   font-weight: 300;
 }
 
+/* 🔘 Buttons */
 button {
   width: 100%;
   padding: 12px;
-  background-color: #a28be7e7;
+  background-color: var(--accent_colour);
   border: none;
   border-radius: 4px;
-  color:  white;
+  color: var(--white);
   font-weight: bold;
   margin-top: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #e0e0e0;
+  background-color: var(--hover_colour);
 }
 
-.forgot-password {
+/* 🧵 Utility Text Links */
+.forgot-password,
+.create-account {
   margin-top: 10px;
-  color: #a28be7e7;
   font-size: 12px;
+  color: var(--accent_colour);
   cursor: pointer;
+}
+
+.create-account a {
+  color: var(--accent_colour);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
 }
