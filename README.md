@@ -1,95 +1,70 @@
-# FastAPI Dockerized Application
+# Getting Started with Create React App
 
-## Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is a simple FastAPI application running inside Docker, with PostgreSQL as the database. It provides two endpoints:
+## Available Scripts
 
-- `GET /`: Returns a hello message.
-- `GET /db-check`: Attempts to connect to the PostgreSQL database and returns connection status.
+In the project directory, you can run:
 
-## Project Structure
+### `npm start`
 
-```
-fastapi-docker-app/
-│   .dockerignore
-│   .env
-│   .gitignore
-│   Commands.pdf
-│   docker-compose.yml
-│   Dockerfile
-│   requirements.txt
-│   
-└───app
-    │   main.py
-    │   __init__.py
-    │   
-    └───__pycache__
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Prerequisites
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- [Docker](https://docs.docker.com/get-docker/) installed
-- [Docker Compose](https://docs.docker.com/compose/install/) installed
+### `npm test`
 
-## Running the Application
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. **Build and start the services:**
+### `npm run build`
 
-   ```bash
-   docker-compose up --build
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. **Access the application:**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   - Open your browser and go to `http://localhost:8000` to see the root endpoint response.
-   - Check the database connection endpoint at `http://localhost:8000/db-check`.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. **Stop the services:**
+### `npm run eject`
 
-   In the terminal where Docker Compose is running, press `CTRL+C`. Then remove the containers (optional):
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-   ```bash
-   docker-compose down -v
-   ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Environment Variables
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-The `.env` file contains the database configuration:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```
-POSTGRES_USER
-POSTGRES_PASSWORD
-POSTGRES_DB
-POSTGRES_PORT
+## Learn More
 
-DB_HOST
-DB_PORT
-DB_NAME
-DB_USER
-DB_PASS
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Useful Commands
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- **Rebuild without cache:**
+### Code Splitting
 
-  ```bash
-  docker-compose build --no-cache
-  ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- **View logs:**
+### Analyzing the Bundle Size
 
-  ```bash
-  docker-compose logs -f
-  ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- **Remove all stopped containers, networks, and volumes:**
+### Making a Progressive Web App
 
-  ```bash
-  docker system prune -af --volumes
-  ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## License
+### Advanced Configuration
 
-This project is for educational and demonstration purposes.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
